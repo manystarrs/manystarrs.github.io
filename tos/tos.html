@@ -9,6 +9,11 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            /* Background image */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .sidebar {
             height: 100%;
@@ -28,20 +33,22 @@
         .content {
             margin-left: 200px;
             padding: 20px;
+            /* Ensure content is visible on top of the background */
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <a href="../index.html">Home</a>
-        <a href="../about/about.html">About</a>
-        <a href="../services/services.html">Services</a>
-        <a href="../contact/contact.html">Contact</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../contact.html">Contact</a>
         <a href="tos.html">Terms of Service</a>
     </div>
     <div class="content">
         <h1>Terms of Service</h1>
-        <p>This is the Terms of Service page.</p>
+        <p>Please read our terms of service carefully before using our website.</p>
     </div>
 </body>
 </html>
