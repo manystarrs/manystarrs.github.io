@@ -19,11 +19,12 @@
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
             height: 100vh; /* Set height to viewport height */
+            position: relative; /* Position relative for absolute positioning of sidebar */
         }
         .sidebar {
             height: 100%;
             width: 200px;
-            position: fixed;
+            position: absolute; /* Position sidebar relative to body */
             top: 0;
             left: 0;
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
