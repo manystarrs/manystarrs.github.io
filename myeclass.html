@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+
+<!-- template name: identifier.first.template.html -->
+
+<html><head>
+    <script>
+        navigator.storage.estimate = null;
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="robots" content="noindex">
+    <title>Sign In | GCPS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <script type="text/javascript" src="/ruxitagentjs_ICA7NVfghqrux_10287240325103108.js" data-dtconfig="app=19a3fb82c2caf3fa|featureHash=ICA7NVfghqrux|srsr=25000|rdnt=1|uxrgce=1|bp=3|cuc=iksw0okd|mel=100000|dpvc=1|md=mdcc2=a#username ^rb span.hidden-xs,mdcc3=a#greeting,mdcc4=a#gcps-top-nav ^rb ul ^rb li:nth-child(9) ^rb div:nth-child(1) ^rb span,mdcc5=blocation.pathname,mdcc6=blocation.pathname,mdcc7=blocation.href|ssv=4|lastModification=1712776145881|tp=500,50,0|agentUri=/ruxitagentjs_ICA7NVfghqrux_10287240325103108.js|reportUrl=/rb_bf56630vvi|rid=RID_1710375629|rpid=1181907664|domain=gcpsk12.org"></script><style type="text/css">
+        @font-face {
+            font-family: Calluna-Regular;
+            src: url(https://apps.gcpsk12.org/ux/3/dist/fonts/calluna/webfonts/2A209A_0_unhinted_0.woff)format("woff");
+        }
+    </style>
+
+<style type="text/css">@font-face{font-family: Calluna-Regular;src:url(https://apps.gcpsk12.org/ux/3/dist/fonts/2A209A_0_unhinted_0.woff)format("woff");}</style></head>
+
+<body>
+    <script id="_navheader" type="text/javascript">
+    var envMap = new Map();
+    envMap.set('devapps.gcpsk12.org','godev.gwinnett.k12.ga.us');
+    envMap.set('uatapps.gwinnett.k12.ga.us','uat.gwinnett.k12.ga.us');
+    envMap.set('qaapps.gcpsk12.org','qa.gwinnett.k12.ga.us');
+    envMap.set('apps.gwinnett.k12.ga.us','publish.gwinnett.k12.ga.us');
+    var host = "https://" + envMap.get(window.location.host);
+    </script>
+
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://apps.gcpsk12.org/ux/3/dist/css/gcps-ux.css">
+    <link rel="stylesheet" type="text/css" href="https://apps.gcpsk12.org/gcpsPublicThemeStatic/themes/gcpsPublicTheme/css/gcps-global.css">
+    <script src="https://apps.gcpsk12.org/ux/3/dist/fonts/calluna/GCPS.js"></script>
+    <script src="https://apps.gcpsk12.org/ux/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--[if lte IE 9]><script src="/ux/libs/jquery-placeholder/2.3.1/jquery.placeholder.min.js"></script><script>$(function() {$('input, textarea').placeholder();});</script><![endif]-->
+    <script src="https://apps.gcpsk12.org/gcpsPublicThemeStatic/themes/gcpsPublicTheme/js/gcps-public-theme.js"></script>
+    <script defer="" src="https://apps.gcpsk12.org/ux/3/dist/js/gcps-ux.js"></script><!-- header -->
+    <header id="gcps-header">
+        <div class="container">
+            <nav id="gcps-top-nav">
+                <ul>
+                    <li class="current portal-tab"><a href="https://www.gcpsk12.org" id="gcps-public" class="gcps-icon-flame"><span class="sr-only">GCPS Website</span></a></li>
+                    <li class="hidden-lg hidden-md hidden-sm" id="mobile-portal-nav"><label for="mobile-portal-nav-button" class="sr-only">Sign in</label><select id="mobile-portal-nav-button">
+                            <option selected="selected">Sign in</option>
+                            <option value="https://go2.gwinnett.k12.ga.us">Parents</option>
+                            <option value="#">Staff</option>
+                            <option value="#">MY eCLASS</option>
+                        </select><span class="gcps-icon-down"></span></li>
+                    <li class="portal-tab hidden-xs"><a href="https://go2.gwinnett.k12.ga.us">Parents</a></li>
+                    <li class="portal-tab hidden-xs"><a href="#">Staff</a></li>
+                    <li class="portal-tab hidden-xs"><a href="#">MY eCLASS</a></li>
+                    <li class="extra-tab"><a href="https://www.gcpsk12.org/lang" class="gcps-icon-language"><span class="sr-only">Languages</span></a></li>
+                    <li class="extra-tab"><a href="https://www.gcpsk12.org/NeedHelp" class="gcps-icon-help"><span class="sr-only">Help</span></a></li>
+                </ul>
+            </nav>
+            <div id="gcps-mid-header">
+                <div id="gcps-brand">
+                    <div class="gcps-icon-torch"></div><a href="https://www.gcpsk12.org">
+                        <h1>G<span class="hidden-xs">winnett </span>C<span class="hidden-xs">ounty </span>P<span class="hidden-xs">ublic </span>S<span class="hidden-xs">chools</span></h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END PORTAL NAVIGATION INTEGRATION -->
+    <script>
+        
+        var hostUrl = window.location.protocol + '//' + window.location.host;
+        var tamPostUrl = hostUrl + '/' + 'pkmslogin.form';
+
+        
+        
+        var tamErrorCode = "%ERROR_CODE%";
+        if(tamErrorCode == undefined || tamErrorCode == "")
+            tamErrorCode = getUrlParameter('error');
+        var userID = "%USERNAME%";
+        //alert(tamErrorCode);
+        //alert(userID);
+
+        var getErrDetailsURL = 'https://apps.gcpsk12.org/provisioning/service/search/user/' + userID;
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(
+                /\+/g, ' '));
+        };
+    </script>
+    <script>
+
+    function postOnReturn(e) {
+        var keycode;
+        if (window.event)
+            keycode = window.event.keyCode;
+        else if (e)
+            keycode = e.which;
+        else
+            return true;
+
+        if (keycode == 13) {
+            postOk();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function postOk() {
+        if (formSubmitted)
+            return true;
+
+        formSubmitted = true;
+        //var hasError = false;
+
+        // remove error tips
+        //if (document.forms[0]['subject'].value !== '') {
+        //    document.getElementById('username-text').className = 'place-bottom type-alert tooltip-text';
+        //}
+        // Add back
+        //if (document.forms[0]['subject'].value === '') {
+        //    document.getElementById('username-text').className += ' show';
+        //    hasError = true;
+        //}
+        //else {
+            submitForm();
+        //}
+        //if (hasError) {
+        //    formSubmitted = false;
+        //}
+    }    
+
+    function submitForm()
+    {
+        document.forms[0].submit();
+    }    
+
+    </script>
+    <main class="container-fluid" id="content">
+        <form class="form-horizontal" name="loginform" id="loginform" role="form" method="POST" action="/federate/as/lJX2tx6y5V/resume/as/authorization.ping" _lpchecked="1">
+            <input type="hidden" name="login-form-type" value="pwd">
+            <div id="portalLoginBox">
+                <hgroup class="text-center" id="_loginheader">
+                    <h2>
+                        Sign in to <strong>GCPS</strong>
+                    </h2>
+                    <script>
+
+                    </script>
+                    <div id="errdetails" data-toggle="modal" data-target="#errorDetailsModal" style="display:none"></div>
+                    <div id="_error"></div>
+
+                    <p id="friendly-message">
+                        <span>Employee Portal &amp; MY <i>e</i>CLASS<span class="trim-mobile"> Student Portal</span>
+                        </span> <span>Use your existing<span class="trim-mobile">
+                                Portal</span> user ID
+                        </span>
+                    </p>
+                </hgroup>
+                <div class="gcps-login-input" id="_divusername">
+
+                    <!-- input id="identifierInput" type="text" size="36" name="subject" value="" autocorrect="off" autocapitalize="off" onKeyPress="return postOnReturn(event)"/ -->
+
+                    <input type="text" name="subject" id="identifierInput" class="form-control input-lg" placeholder="USER ID" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" onKeyPress="return postOnReturn(event)" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAA11JREFUWAndVzlLY1EU/pKJioiiiYoxgoIguMQoUyg2CTbBTrCcUvAHWFgJNlbzM6wGQQQLO3VEEEtTuRSKiMaFxA0R18z57uRd5r3szxeEOZDce8/63XOX864LQvPz84G3t7ef0o2kUqlW8pwil8t1Lr5+ezyemdnZ2TOrX1c6eEwC+6xCJ8cCJCEgQlYQbs683ME5EcZIZ9k0L7eMIiZOeQcZsdxOr3k+/NliMQNfSv83gO7ubkxPT4NtLiprBnp7e1FXVwe2uaisAOTsq7hGmw1EWQFkC2jlmQBUVVWhs7MTDQ0NVj3YlWU4sjA8xri+vh6Tk5Oora3Fx8cHVlZWsLu7q8R2ZYbvfK3OwPDwsApOZbfbjdHRUW1nV6Yd5OloAHl0yirSAHZ2dvDw8KCCcQnW19d1YLsy7SBPxzU3N5cy5NxobW1tSCaTuLm5MdiqzSczKRYYyJGMi8pm+vvg1ASggK2jYgGSFBADegkc9V6EM6mMXn4ffBmANMawvgeKAJ2hEgwGMTIyAp/Ph7u7O+zv72NjY0PdIxnKWRiSBb9tAAw+MTGh3TY1NYE/gllcXNR8dhobG1FZWYnLy0u8v7+bZLaXgDMnvb6+Ynl5GUdHR2rc09OD1lbzh/X4+DimpqZQU1OjdP79sw2AMyXF43HEYjFsbW1pv+3t7bpfqOOR43Ce7VutkOHT05NKK9POgH19fdqEtaOjowOhUEjxjOIWjUbx8vKC6+trbG9vK9m3SCTyXXpBbV1kx+v1IhAIoKKiAoODg2hpaeGnN1j7j4+PVT0Jh8Pw+/0KKN02NzerMXWYNZLcBZ4ZOY9RMf6bU8Uu/Le2tobq6mp0dXWpXc/rWiajDG9vb3F4eIiFhQU1HhsbUxt0aWkJj4+PYPYM8vClIq+jUPrRUPTT7Pn5GXRIYvVkEM6MdHFxoeqKUVuoSzo5OcH9/b3qG3/qGKafSz8MZr7WqB1M/9DQEFOodj3XnXRwcICzM/MTMJFIKD0WOSvZvgd4pPr7+03+9vb2sLq6auJxwGOai2wD4Kx49HixsHJeXV2pI5krUC7+pwBwI36WSr6IZKOxnjtC9FUyAIm86Uj0v042SwbAe0OQJz8Lgj7oq2QAcmRPxXBAHPxiCksFQhva0gd9/QFliFiu8Gk7TgAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    <label class="glyphicon glyphicon-user" for="portalUserID"></label>
+                </div>
+                <input type="hidden" name="pf.ok" value="clicked" />
+                <input type="hidden" name="pf.cancel" value="" />
+                <input type="hidden" name="$adapterIdField" id="$adapterIdField" value="IDFirstADAdapter" />
+                <button class="btn btn-lg btn-info btn-block text-uppercase" id="_loginsubmit" type="submit">Next</button>
+
+            </div>
+
+        </form>
+
+        <div id="portalLoginActions">
+            <div id="portalLoginActionButtons">
+                <button class="btn btn-default" data-toggle="modal" data-target="#forgotPasswordModal">Forgot your password?</button>
+                <div class="divider"></div>
+                <button class="btn btn-default" data-toggle="modal" data-target="#createModal">Create / Activate account</button>
+            </div>
+            <div class="modal fade" id="errorDetailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true"></span><span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body" id="_dispErrorDetails">
+
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+            <!--  modal for forgot password -->
+            <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true"></span><span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">Forgot your password?</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <a class="account-action" id="forgotEmployeePassword" href="https://apps.gcpsk12.org/spa-forgot-password/index.html"><span class="option-text">Employees<span class="gcps-icon-right"></span>
+                                </span>
+                                <div class="option-directions">Reset password for Employees,
+                                    Retirees, and Beneficiaries. You will need your User ID.</div>
+                            </a>
+
+
+
+                            <a class="account-action disabled" id="forgotStudentPassword">
+                                <span class="option-text">Students<span class="gcps-icon-right"></span>
+                                </span>
+                                <div class="option-directions">Please contact your teacher
+                                    to reset your MY eCLASS Student Portal password for you.</div>
+                            </a>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal for create / activate account -->
+            <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true"></span><span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">Create / Activate an account</h4>
+                        </div>
+
+
+                        <div class="modal-body">
+
+                            <a class="account-action" id="createEmployeeAccount" href="https://apps.gcpsk12.org/spa-create-activate-account/index.html"> <span class="option-text">Employees <span class="gcps-icon-right"></span>
+                                </span>
+                                <div class="option-directions">Register as an Employee,
+                                    Retiree, or Beneficiary. You will be asked for more information.</div>
+                            </a>
+
+                            <a href="https://apps.gcpsk12.org/student-activate/index.html" class="account-action" id="createStudentAccount"> <span class="option-text">Students
+                                    <span class="gcps-icon-right"></span>
+                                </span>
+                                <div class="option-directions">
+                                    Activate or reactivate your MY <i>e</i>CLASS account. You may ask
+                                    your teacher for help.
+                                </div>
+                            </a>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script defer="defer" src="https://apps.gcpsk12.org/ux/3/dist/js/signin.min.js?version=1.1"></script>
+    <!-- <script defer="defer" src="https://apps.gcpsk12.org/gcpsunifiedlogin/signin.min.js"></script> -->
+
+    <footer id="gcps-footer">
+        <section id="gcps-footer-top" class="container">
+            <div id="gcps-contact" class="hidden-sm hidden-xs"><a href="tel:6783016000"><span class="gcps-icon-phone"></span> <b>(678) 301-6000</b></a>
+                <address><a href="https://www.google.com/maps/place/437+Old+Peachtree+Rd+NW/@34.015717,-84.057693,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5962c9f611665:0xbde1252a0d9f4fa0?hl=en" target="_blank" id="gcps-map">437 Old Peachtree Road NW<br>Suwanee, GA 30024-2978</a></address>
+            </div>
+            <div id="gcps-torch-logo"><span class="gcps-icon-up"></span></div>
+            <div id="gcps-vision-copyright"><span id="motto"><strong class="text-uppercase">Envisioning A System of <br>World-Class Schools</strong></span><br><span id="advanced"><span class="hidden-sm hidden-xs">Gwinnett County Public Schools has earned and maintains system </span><span class="hidden-xs hidden-md hidden-lg">Gwinnett County Public Schools has system </span><span class="hidden-sm hidden-md hidden-lg">GCPS has </span>accreditation through <a href="https://www.gcpsk12.org/Accreditation" target="_blank">Cognia</a>.<br></span><span id="webmaster">If any visitor to
+                    this site has an <br class="visible-xs">issue accessing information, <br class="visible-xs">please <a href="mailto:webmaster@gcpsk12.org?body=Please share your feedback with us:">contact us</a>. <a href="https://www.gcpsk12.org/PrivacyStatement" title="View the Gwinnett County Public Schools Privacy Statement" target="_blank">Privacy Statement</a><br></span><span id="copyright"><span class="hidden-sm hidden-xs">Copyright </span> <span id="gcps-copyright-year">2022</span> Gwinnett County Public <br class="visible-xs">Schools. All Rights
+                    Reserved. <br class="visible-xs"><a href="https://www.gcpsk12.org/OpenRecordsCompliance" id="or-link" style="color: inherit;">Open Records/Compliance</a></span></div>
+        </section>
+        <section id="gcps-footer-bottom">
+            <div class="container">
+                <ul id="gcps-social-links">
+                    <li><a href="/gcps/home/public/news/content/rss-feeds" id="rss"><span class="gcps-icon-rss"></span><span class="sr-only">GCPS RSS Feed</span></a></li>
+                    <li><a href="https://www.facebook.com/pages/Gwinnett-County-Public-Schools/337785413786" target="_blank" id="facebook"><span class="gcps-icon-facebook"></span><span class="sr-only">GCPS on Facebook</span></a></li>
+                    <li><a href="http://twitter.com/GwinnettSchools" target="_blank" id="twitter"><span class="gcps-icon-twitter"></span><span class="sr-only">GCPS on Twitter</span></a></li>
+                    <li class="visible-sm visible-xs"><a href="https://www.google.com/maps/place/437+Old+Peachtree+Rd+NW/@34.015717,-84.057693,17z/data=!3m1!4b1!4m2!3m1!1s0x88f5962c9f611665:0xbde1252a0d9f4fa0?hl=en" id="address" target="_blank"><span class="gcps-icon-map"></span><span class="sr-only">GCPS Headquarters
+                                on Google Maps</span></a></li>
+                    <li class="visible-sm visible-xs"><a href="tel:6783016000" id="call"><span class="gcps-icon-phone"></span><span class="sr-only">Call GCPS at (678) 301-6000</span></a></li>
+                </ul><small id="gcps-accessibility"><span class="gcps-icon-accessibility"></span>Gwinnett County Public Schools wishes to meet the needs of all of its students and families. If any member of your family needs assistance or has any questions regarding mobility impaired issues or handicapped access,
+                    please contact the principal of your <a href="https://www.gcpsk12.org/LocalSchools" id="ls-link">local school</a>. <a href="https://www.gcpsk12.org/NonDiscriminationPolicies" id="nd-link">Nondiscrimination Policies</a></small>
+            </div>
+        </section>
+    </footer>
+    <!-- END PORTAL NAVIGATION INTEGRATION -->
+    <link defer="defer" rel="stylesheet" type="text/css" href="https://apps.gcpsk12.org/ux/3/dist/css/gcps-signin-addon.css">
+
+
+
+</body></html>
